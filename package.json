@@ -1,0 +1,36 @@
+{
+  "name": "lski-fetch-json",
+  "version": "1.0.0",
+  "description": "Fetch wrapper to handle JSON automatically",
+  "main": "dist/fetch-json.js",
+  "module": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lski/lski-fetch-json.git"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "jest": "^20.0.4",
+    "node-fetch": "^1.7.2",
+    "regenerator-runtime": "^0.11.0",
+    "webpack": "^3.5.5",
+    "webpack-auto-inject-version": "^0.5.14"
+  },
+  "scripts": {
+    "test": "jest",
+    "build:dev": ".\\node_modules\\.bin\\webpack",
+    "build:prod": ".\\node_modules\\.bin\\webpack --env.prod",
+    "build": "npm run build:dev & npm run build:prod"
+  },
+  "keywords": [
+    "fetch",
+    "ajax",
+    "json"
+  ],
+  "author": "Lee Cooper <lee.cooper@lski.uk>",
+  "license": "MIT"
+}
