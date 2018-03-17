@@ -1,0 +1,20 @@
+{
+	"env": {
+		"browser": true,
+		"amd": true,
+		"commonjs": true,
+		"es6": true,
+		"jest": true
+	},
+	"extends": ["eslint:recommended"],
+	"parserOptions": {
+		"sourceType": "module",
+		"experimentalObjectRestSpread": true
+	},
+	"rules": {
+		"indent": [1, "tab"],
+		"linebreak-style": [2, "windows"],
+		"quotes": [2, "single"],
+		"semi": [2, "always"]
+	}
+}

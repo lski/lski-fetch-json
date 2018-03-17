@@ -8,17 +8,18 @@ global.Request = Request;
 
 it('gets data', () => {
 
-    const prom = fetchJson('http://api-echo.azurewebsites.net/echo', postJson({ a: "helloworld" }))
+	const prom = fetchJson('http://api-echo.azurewebsites.net/echo', postJson({ a: 'helloworld' }));
 
-    prom.then((response) => {
-        expect(response.data).not.toBeNull();
-        expect(response.data.a).toBe("helloworld");
-    })
-    .catch((err) => {
-        expect(err).toBeNull();
-    });
+	prom
+		.then((response) => {
+			expect(response.data).not.toBeNull();
+			expect(response.data.a).toBe('helloworld');
+		})
+		.catch((err) => {
+			expect(err).toBeNull();
+		});
 
-    expect(prom).not.toBeNull();
+	expect(prom).not.toBeNull();
 
-    return prom;
+	return prom;
 });

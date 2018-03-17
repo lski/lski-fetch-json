@@ -5,7 +5,7 @@ import requestJson from './request-json';
 
 export default fetchJson;
 export {
-    postJson,
-    putJson,
-    requestJson
-}
+	postJson,
+	putJson,
+	requestJson
+};
