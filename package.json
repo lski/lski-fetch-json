@@ -1,6 +1,6 @@
 {
   "name": "lski-fetch-json",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fetch wrapper to handle JSON automatically",
   "main": "dist/fetch-json.js",
   "module": "index.js",
@@ -9,22 +9,24 @@
     "url": "https://github.com/lski/lski-fetch-json.git"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-jest": "^20.0.3",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
-    "babel-preset-env": "^1.6.0",
-    "eslint": "^4.19.0",
-    "jest": "^20.0.4",
-    "node-fetch": "^1.7.2",
-    "regenerator-runtime": "^0.11.0",
-    "webpack": "^3.5.5",
-    "webpack-auto-inject-version": "^0.5.14"
+    "babel-core": "6.26.3",
+    "babel-cli": "6.26.0",
+    "babel-jest": "23.6.0",
+    "babel-loader": "7.x.x",
+    "babel-plugin-transform-es2015-modules-umd": "6.24.1",
+    "babel-preset-env": "1.7.0",
+    "eslint": "5.6.0",
+    "jest": "23.6.0",
+    "node-fetch": "2.2.0",
+    "regenerator-runtime": "0.12.1",
+    "webpack": "4.19.0",
+    "webpack-cli": "3.1.0",
+    "webpack-auto-inject-version": "1.1.0"
   },
   "scripts": {
     "test": "jest",
-    "build:dev": ".\\node_modules\\.bin\\webpack",
-    "build:prod": ".\\node_modules\\.bin\\webpack --env.prod",
+    "build:dev": "./node_modules/.bin/webpack --mode=development",
+    "build:prod": "./node_modules/.bin/webpack --mode=production",
     "build": "npm run build:dev & npm run build:prod"
   },
   "keywords": [

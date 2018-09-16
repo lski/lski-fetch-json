@@ -1,17 +1,18 @@
 /* eslint-env node */
 const path = require('path');
-const webpack = require('webpack');
 const webpackAutoInject = require('webpack-auto-inject-version');
 
-module.exports = (env) => {
+module.exports = (env, argv) => {
 
-	const prod = env && env.prod;
-	const filename = prod ? 'fetch-json.min.js' : 'fetch-json.js';
+	const dev = argv && argv.mode === 'development';
+console.log(dev);
+
+	const filename = dev ? 'fetch-json.js' : 'fetch-json.min.js';
 	const plugins = [new webpackAutoInject({ autoIncrease: false, injectByTag: false })];
 
-	if (prod) {
-		plugins.push(new webpack.optimize.UglifyJsPlugin());
-	}
+	// if (prod) {
+	// 	plugins.push(new webpack.optimize.UglifyJsPlugin());
+	// }
 
 	return {
 		context: path.resolve(__dirname, './'),
