@@ -15,7 +15,8 @@ export default {
 			sourcemap: true,
 			banner,
 			preserveModules: true,
-			preserveModulesRoot: 'src'
+			preserveModulesRoot: 'src',
+			plugins: [terser()]
 		},
 		{
 			file: pkg.browser,
