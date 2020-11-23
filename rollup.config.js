@@ -9,11 +9,13 @@ export default {
 	plugins: [del({ targets: 'dist/*' })],
 	output: [
 		{
-			file: pkg.module,
+			dir: 'dist/es',
 			format: 'es',
 			exports: 'named',
 			sourcemap: true,
 			banner,
+			preserveModules: true,
+			preserveModulesRoot: 'src'
 		},
 		{
 			file: pkg.browser,
