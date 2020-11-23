@@ -1,5 +1,4 @@
-import fetchJson from '../fetch-json';
-import postJson from '../post-json';
+import { fetchJson, postJson } from '../src';
 import fetch, { Headers, Request } from 'node-fetch';
 
 global.fetch = fetch;
@@ -8,7 +7,7 @@ global.Request = Request;
 
 it('gets data', () => {
 
-	const prom = fetchJson('http://api-echo.azurewebsites.net/echo', postJson({ a: 'helloworld' }));
+	const prom = fetchJson('https://api-echo.azurewebsites.net/echo', postJson({ a: 'helloworld' }));
 
 	prom
 		.then((response) => {

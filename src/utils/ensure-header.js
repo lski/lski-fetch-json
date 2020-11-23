@@ -1,4 +1,4 @@
-export default function ensureHeader(name, value, headers) {
+export function ensureHeader(name, value, headers) {
 
 	if (!name || typeof name !== 'string') {
 		throw new TypeError('The header name should not be empty/null');

@@ -1,4 +1,4 @@
-import requestJson from '../request-json';
+import { requestJson } from '../src';
 import fetch, { Headers, Request } from 'node-fetch';
 
 global.fetch = fetch;
@@ -6,7 +6,6 @@ global.Headers = Headers;
 global.Request = Request;
 
 it('request as correct accept type', () => {
-
 	let request = requestJson('http://www.google.com');
 
 	expect(request.headers).not.toBeNull();
@@ -14,11 +13,10 @@ it('request as correct accept type', () => {
 });
 
 it('request overrides the correct accept type', () => {
-
-	let request = requestJson('http://www.google.com', {  
+	let request = requestJson('http://www.google.com', {
 		headers: new Headers({
-			'accept': 'image/jpeg'
-		})
+			accept: 'image/jpeg',
+		}),
 	});
 
 	expect(request.headers).not.toBeNull();
