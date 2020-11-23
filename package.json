@@ -1,6 +1,6 @@
 {
 	"name": "lski-fetch-json",
-	"version": "2.0.0",
+	"version": "2.0.0-alpha",
 	"description": "Fetch wrapper to handle JSON automatically",
 	"author": "Lee Cooper <lee.cooper@lski.uk>",
 	"license": "MIT",
