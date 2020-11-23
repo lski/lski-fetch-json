@@ -1,4 +1,4 @@
-import put from '../put-json';
+import { putJson } from '../src';
 import fetch, { Headers } from 'node-fetch';
 
 global.fetch = fetch;
@@ -8,13 +8,13 @@ const data = { val: 'https://www.google.co.uk' };
 
 it('put has the correct data', () => {
 
-	let options = put(data);
+	let options = putJson(data);
 
 	expect(options.headers).not.toBe(null);
 	expect(options.headers.get('content-type')).toBe('application/json');
 	expect(options.body).toBe('{"val":"https://www.google.co.uk"}');
 
-	options = put(data, {
+	options = putJson(data, {
 		body: 'helloworld'
 	});
 
@@ -26,12 +26,12 @@ it('put has the correct data', () => {
 
 it('put has default headers', () => {
 
-	let options = put(data);
+	let options = putJson(data);
 
 	expect(options.headers).not.toBe(null);
 	expect(options.headers.get('content-type')).toBe('application/json');
 
-	options = put(data, {
+	options = putJson(data, {
 		mode: 'cors'
 	});
 
@@ -42,7 +42,7 @@ it('put has default headers', () => {
 
 it('put has the correct headers', () => {
 
-	let options = put(data, {
+	let options = putJson(data, {
 		headers: new Headers({
 			'content-type': 'image/jpeg'
 		})

@@ -1,6 +1,6 @@
-import requestJson from '../request-json';
+import { requestJson } from './request-json';
 
-export default function fetchJson(...args) {
+export function fetchJson(...args) {
 
 	var request = requestJson.apply(null, args);
 
