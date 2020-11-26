@@ -1,6 +1,8 @@
 lski-fetch-json
 ===============
 
+***Deprecated:** Package didnt have proper focus, plus the main function 'fetchJson' did not handle real world errors that well. So recommended you dont use it going forward.*
+
 This library provides a few functions that wrap parts of the fetch API to default headers and the data to sending and/or receiving JSON, rather than having to write it each time.
 
 This library is all about convenience, easy of use and flexibility, you can choose whether you just want to send, or just want to receive JSON or in fact both in the same call.
